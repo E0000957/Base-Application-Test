@@ -103,3 +103,6 @@ sonar-project.properties
 
 # Ignorar la carpeta .idea
 .idea/
+.idea/sonarlint/
+.idea/sonarlint/issuestore/
+.idea/sonarlint/securityhotspotstore/

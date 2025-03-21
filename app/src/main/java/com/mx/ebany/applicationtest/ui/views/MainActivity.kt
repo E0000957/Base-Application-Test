@@ -2,7 +2,6 @@ package com.mx.ebany.applicationtest.ui.views
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -23,23 +22,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setInitialValues()
-        setObservers()
-    }
-
-    private fun setInitialValues() {
-        viewModel.loadUsers()
-        viewModel.saveUser(
-            UsersEntity(
-                name = "John Doe",
-            )
-        )
-    }
-
-    private fun setObservers() {
-        viewModel.userData.observe(this) { user ->
-            Log.d("MainActivity", "User: $user")
-        }
     }
 
 
