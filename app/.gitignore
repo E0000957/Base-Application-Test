@@ -100,3 +100,6 @@ lint/tmp/
 .sonar/
 .sonarcloud/
 sonar-project.properties
+
+# Ignorar la carpeta .idea
+.idea/
