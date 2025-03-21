@@ -97,3 +97,6 @@ lint/tmp/
 
 # Android Profiling
 *.hprof
+.sonar/
+.sonarcloud/
+sonar-project.properties
