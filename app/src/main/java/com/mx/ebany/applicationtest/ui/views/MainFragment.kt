@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.mx.ebany.applicationtest.R
 import com.mx.ebany.applicationtest.data.local.entities.UsersEntity
+import com.mx.ebany.applicationtest.data.models.User
 import com.mx.ebany.applicationtest.databinding.FragmentMainBinding
 import com.mx.ebany.applicationtest.ui.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -46,16 +47,22 @@ class MainFragment : Fragment() {
 
     private fun setListeners() {
         binding.btnSave.setOnClickListener {
-            viewModel.saveUser(
-                UsersEntity(
-                    name = binding.etName.text.toString(),
-                )
-            )
+
+            viewModel.addUserFirestore(User(
+                nombre = "DAVID",
+                edad = 30,
+                apellidoPaterno = "GARCIA",
+                apellidoMaterno = "GONZALEZ",
+                sesion = "123456"
+
+            ))
         }
+
+
     }
 
     private fun setObservers() {
-        viewModel.userData.observe(requireActivity()) { user ->
+        viewModel.dataUser.observe(requireActivity()) { user ->
             Log.d("MainActivity", "User: $user")
         }
     }

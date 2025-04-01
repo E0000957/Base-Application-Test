@@ -3,7 +3,11 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    id 'com.google.gms.google-services'  // 🔥 Firebase
+    id 'com.google.firebase.crashlytics' // 🛠️ Crashlytics
+
 }
+
 
 android {
     namespace 'com.mx.ebany.applicationtest'
@@ -78,4 +82,21 @@ dependencies {
     implementation libs.androidx.navigation.ui
 
 
+    // Firebase BOM (Maneja las versiones automáticamente)
+    implementation platform('com.google.firebase:firebase-bom:33.0.0')
+
+    // Firestore
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Opcional: Firebase Auth (si usas autenticación)
+    implementation 'com.google.firebase:firebase-auth'
+
+    // Opcional: Firestore con Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3'
+
+    // Opcional: Firebase Crashlytics (para reportar errores)
+    implementation 'com.google.firebase:firebase-crashlytics'  // 📢 Crashlytics
+
+    // Opcional: Firebase Analytics
+    implementation 'com.google.firebase:firebase-analytics'
 }

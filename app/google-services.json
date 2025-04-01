@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "968493355392",
+    "project_id": "application-base-45b0d",
+    "storage_bucket": "application-base-45b0d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968493355392:android:0f58536a054b61ffc4f165",
+        "android_client_info": {
+          "package_name": "com.mx.ebany.applicationtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZzERsPNYzAyCK73UC4TtTAGbZ5owc2b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
